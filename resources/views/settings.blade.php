@@ -12,68 +12,132 @@
                 </div>
             @endif
 
-            <div class="card">
+            <div class="card setting-card mb-3 p-2">
                 <a href="{{ route('settings.general') }}">
-                    <div class="title">General</div>
-                    <div class="swiper-button-black">View and update general application settings</div>
+                    <div class="d-flex setting-item align-items-center">
+                        <div class="setting-icon p-2 mr-3 d-flex align-items-center">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <div class="setting-content">
+                            <div class="setting-title font-weight-bold">General</div>
+                            <div class="setting-description">View and update general application settings</div>
+                        </div>
+                    </div>
                 </a>
             </div>
 
-            <div class="card">
+            <div class="card setting-card mb-3 p-2">
                 <a href="{{ route('users') }}">
-                    <div class="title">Users</div>
-                    <div class="swiper-button-black">Manage Users</div>
+                    <div class="d-flex setting-item align-items-center">
+                        <div class="setting-icon p-2 mr-3 d-flex align-items-center">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <div class="setting-content">
+                            <div class="setting-title font-weight-bold">Users</div>
+                            <div class="setting-description">Manage Users</div>
+                        </div>
+                    </div>
                 </a>
             </div>
 
-            <div class="card">
+            <div class="card setting-card mb-3 p-2">
                 <a href="{{ route('settings.printnode') }}">
-                    <div class="title">PrintNode</div>
-                    <div class="swiper-button-black">View and update PrintNode integration  settings</div>
+                    <div class="d-flex setting-item align-items-center">
+                        <div class="setting-icon p-2 mr-3 d-flex align-items-center">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <div class="setting-content">
+                            <div class="setting-title font-weight-bold">PrintNode</div>
+                            <div class="setting-description">View and update PrintNode integration  settings</div>
+                        </div>
+                    </div>
                 </a>
             </div>
 
-            <div class="card">
+            <div class="card setting-card mb-3 p-2">
                 <a href="{{ route('settings.rmsapi') }}">
-                    <div class="title">Microsoft Dynamic RMS 2.0 API</div>
-                    <div class="swiper-button-black">View and update RMS API integration settings</div>
+                    <div class="d-flex setting-item align-items-center">
+                        <div class="setting-icon p-2 mr-3 d-flex align-items-center">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <div class="setting-content">
+                            <div class="setting-title font-weight-bold">Microsoft Dynamic RMS 2.0 API</div>
+                            <div class="setting-description">View and update RMS API integration settings</div>
+                        </div>
+                    </div>
                 </a>
             </div>
 
-            <div class="card">
+            <div class="card setting-card mb-3 p-2">
                 <a href="{{ route('settings.dpd-ireland') }}">
-                    <div class="title">DPD Ireland API</div>
-                    <div class="swiper-button-black">View and update DPD Ireland integration settings</div>
+                    <div class="d-flex setting-item align-items-center">
+                        <div class="setting-icon p-2 mr-3 d-flex align-items-center">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <div class="setting-content">
+                            <div class="setting-title font-weight-bold">DPD Ireland API</div>
+                            <div class="setting-description">View and update DPD Ireland integration settings</div>
+                        </div>
+                    </div>
                 </a>
             </div>
 
-            <div class="card">
+            <div class="card setting-card mb-3 p-2">
                 <a href="{{ route('settings.api2cart') }}">
-                    <div class="title">Api2cart</div>
-                    <div class="swiper-button-black">View and update Api2cart integration settings</div>
+                    <div class="d-flex setting-item align-items-center">
+                        <div class="setting-icon p-2 mr-3 d-flex align-items-center">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <div class="setting-content">
+                            <div class="setting-title font-weight-bold">Api2cart</div>
+                            <div class="setting-description">View and update Api2cart integration settings</div>
+                        </div>
+                    </div>
                 </a>
             </div>
 
-            <div class="card">
+            <div class="card setting-card mb-3 p-2">
                 <a href="{{ route('settings.api') }}">
-                    <div class="title">API</div>
-                    <div class="swiper-button-black">View and update application API settings and tokens</div>
+                    <div class="d-flex setting-item align-items-center">
+                        <div class="setting-icon p-2 mr-3 d-flex align-items-center">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <div class="setting-content">
+                            <div class="setting-title font-weight-bold">API</div>
+                            <div class="setting-description">View and update application API settings and tokens</div>
+                        </div>
+                    </div>
                 </a>
             </div>
 
-            <div class="card">
+            <div class="card setting-card mb-3 p-2">
                 <a href="{{ url('admin/tools/queue-monitor') }}" target="_blank">
-                    <div class="title">Queue Monitor</div>
-                    <div class="swiper-button-black">Open jobs monitor</div>
+                    <div class="d-flex setting-item align-items-center">
+                        <div class="setting-icon p-2 mr-3 d-flex align-items-center">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <div class="setting-content">
+                            <div class="setting-title font-weight-bold">Queue Monitor</div>
+                            <div class="setting-description">Open jobs monitor</div>
+                        </div>
+                    </div>
                 </a>
             </div>
 
-            <div class="card">
+            <div class="card setting-card p-2">
                 <a href="{{ url('admin/tools/log-viewer') }}" target="_blank">
-                    <div class="title">Log Viewer</div>
-                    <div class="swiper-button-black">View application logs</div>
+                    <div class="d-flex setting-item align-items-center">
+                        <div class="setting-icon p-2 mr-3 d-flex align-items-center">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <div class="setting-content">
+                            <div class="setting-title font-weight-bold">Log Viewer</div>
+                            <div class="setting-description">View application logs</div>
+                        </div>
+                    </div>
                 </a>
             </div>
+
         </div>
 </div>
 @endsection

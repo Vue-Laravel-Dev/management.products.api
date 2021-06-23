@@ -1,0 +1,29 @@
+.card a:hover {
+    text-decoration: none;
+}
+.setting-card {
+    border-color: #fff;
+    border-width: 3px;
+}
+.setting-card:hover {
+    background-color: #f9fafc;
+}
+.setting-card:hover .setting-icon {
+    background-color: #e0e3e8;
+}
+.setting-card:hover .setting-title {
+    color: #224d84;
+}
+.setting-icon {
+    background-color: #f5f6f8;
+}
+.setting-icon i {
+    color: #949eaa;
+    font-size: 1.3rem;
+}
+.setting-title {
+    color: #2f6eb5;
+}
+.setting-description {
+    color: #6d7174;
+}
