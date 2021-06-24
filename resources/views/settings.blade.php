@@ -1,3 +1,63 @@
+<?php
+
+$cards = [
+    [
+        'link' => 'settings.general',
+        'title' => 'General',
+        'description' => 'View and update general application settings',
+        'external' => false
+    ],
+    [
+        'link' => 'users',
+        'title' => 'Users',
+        'description' => 'Manage Users',
+        'external' => false
+    ],
+    [
+        'link' => 'settings.printnode',
+        'title' => 'PrintNode',
+        'description' => 'View and update PrintNode integration  settings',
+        'external' => false
+    ],
+    [
+        'link' => 'settings.rmsapi',
+        'title' => 'Microsoft Dynamic RMS 2.0 API',
+        'description' => 'View and update RMS API integration settings',
+        'external' => false
+    ],
+    [
+        'link' => 'settings.dpd-ireland',
+        'title' => 'DPD Ireland API',
+        'description' => 'View and update DPD Ireland integration settings',
+        'external' => false
+    ],
+    [
+        'link' => 'settings.api2cart',
+        'title' => 'Api2cart',
+        'description' => 'View and update Api2cart integration settings',
+        'external' => false
+    ],
+    [
+        'link' => 'settings.api',
+        'title' => 'API',
+        'description' => 'View and update application API settings and tokens',
+        'external' => false
+    ],
+    [
+        'link' => 'admin/tools/queue-monitor',
+        'title' => 'Queue Monitor',
+        'description' => 'Open jobs monitor',
+        'external' => true
+    ],
+    [
+        'link' => 'admin/tools/log-viewer',
+        'title' => 'Log Viewer',
+        'description' => 'View application logs',
+        'external' => true
+    ]
+];
+
+?>
 @extends('layouts.app')
 
 @section('title', __('Settings'))
@@ -11,132 +71,19 @@
                     {{ session('status') }}
                 </div>
             @endif
-
-            <div class="card setting-card mb-3 p-2">
-                <a href="{{ route('settings.general') }}">
-                    <div class="d-flex setting-item align-items-center">
-                        <div class="setting-icon p-2 mr-3 d-flex align-items-center">
-                            <i class="fas fa-cog"></i>
+            
+            @foreach ($cards as $card)
+                <div class="card setting-card p-2 {{ $loop->first ?  '' : 'mt-3' }}">
+                    <a href="{{ $card['external'] ?  url($card['link']) : route($card['link'])}}"{!! $card['external'] ? 'target="blank"' : '' !!}>
+                        <div class="d-flex setting-item align-items-center">
+                            <div class="setting-content">
+                                <div class="setting-title font-weight-bold">{{ $card['title'] }}</div>
+                                <div class="setting-description">{{ $card['description'] }}</div>
+                            </div>
                         </div>
-                        <div class="setting-content">
-                            <div class="setting-title font-weight-bold">General</div>
-                            <div class="setting-description">View and update general application settings</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card setting-card mb-3 p-2">
-                <a href="{{ route('users') }}">
-                    <div class="d-flex setting-item align-items-center">
-                        <div class="setting-icon p-2 mr-3 d-flex align-items-center">
-                            <i class="fas fa-cog"></i>
-                        </div>
-                        <div class="setting-content">
-                            <div class="setting-title font-weight-bold">Users</div>
-                            <div class="setting-description">Manage Users</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card setting-card mb-3 p-2">
-                <a href="{{ route('settings.printnode') }}">
-                    <div class="d-flex setting-item align-items-center">
-                        <div class="setting-icon p-2 mr-3 d-flex align-items-center">
-                            <i class="fas fa-cog"></i>
-                        </div>
-                        <div class="setting-content">
-                            <div class="setting-title font-weight-bold">PrintNode</div>
-                            <div class="setting-description">View and update PrintNode integration  settings</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card setting-card mb-3 p-2">
-                <a href="{{ route('settings.rmsapi') }}">
-                    <div class="d-flex setting-item align-items-center">
-                        <div class="setting-icon p-2 mr-3 d-flex align-items-center">
-                            <i class="fas fa-cog"></i>
-                        </div>
-                        <div class="setting-content">
-                            <div class="setting-title font-weight-bold">Microsoft Dynamic RMS 2.0 API</div>
-                            <div class="setting-description">View and update RMS API integration settings</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card setting-card mb-3 p-2">
-                <a href="{{ route('settings.dpd-ireland') }}">
-                    <div class="d-flex setting-item align-items-center">
-                        <div class="setting-icon p-2 mr-3 d-flex align-items-center">
-                            <i class="fas fa-cog"></i>
-                        </div>
-                        <div class="setting-content">
-                            <div class="setting-title font-weight-bold">DPD Ireland API</div>
-                            <div class="setting-description">View and update DPD Ireland integration settings</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card setting-card mb-3 p-2">
-                <a href="{{ route('settings.api2cart') }}">
-                    <div class="d-flex setting-item align-items-center">
-                        <div class="setting-icon p-2 mr-3 d-flex align-items-center">
-                            <i class="fas fa-cog"></i>
-                        </div>
-                        <div class="setting-content">
-                            <div class="setting-title font-weight-bold">Api2cart</div>
-                            <div class="setting-description">View and update Api2cart integration settings</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card setting-card mb-3 p-2">
-                <a href="{{ route('settings.api') }}">
-                    <div class="d-flex setting-item align-items-center">
-                        <div class="setting-icon p-2 mr-3 d-flex align-items-center">
-                            <i class="fas fa-cog"></i>
-                        </div>
-                        <div class="setting-content">
-                            <div class="setting-title font-weight-bold">API</div>
-                            <div class="setting-description">View and update application API settings and tokens</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card setting-card mb-3 p-2">
-                <a href="{{ url('admin/tools/queue-monitor') }}" target="_blank">
-                    <div class="d-flex setting-item align-items-center">
-                        <div class="setting-icon p-2 mr-3 d-flex align-items-center">
-                            <i class="fas fa-cog"></i>
-                        </div>
-                        <div class="setting-content">
-                            <div class="setting-title font-weight-bold">Queue Monitor</div>
-                            <div class="setting-description">Open jobs monitor</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card setting-card p-2">
-                <a href="{{ url('admin/tools/log-viewer') }}" target="_blank">
-                    <div class="d-flex setting-item align-items-center">
-                        <div class="setting-icon p-2 mr-3 d-flex align-items-center">
-                            <i class="fas fa-cog"></i>
-                        </div>
-                        <div class="setting-content">
-                            <div class="setting-title font-weight-bold">Log Viewer</div>
-                            <div class="setting-description">View application logs</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
+                    </a>
+                </div>
+            @endforeach
 
         </div>
 </div>

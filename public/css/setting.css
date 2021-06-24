@@ -14,13 +14,6 @@
 .setting-card:hover .setting-title {
     color: #224d84;
 }
-.setting-icon {
-    background-color: #f5f6f8;
-}
-.setting-icon i {
-    color: #949eaa;
-    font-size: 1.3rem;
-}
 .setting-title {
     color: #2f6eb5;
 }
